@@ -2,11 +2,12 @@ import classNames from 'classnames'
 import { icons } from './ButtonIcons'; 
 import { Fragment } from 'react';
 
-export default function Button({ children ,className, highlight, elevated, type }){
+export default function Button({ children ,className, highlight, elevated, type, scale }){
 
   const finalClassnames = classNames('rounded-full p-2 text-white/70 hover:text-white transition-all', className, {
     'hover:bg-highlight': highlight,
     'bg-elevated-base hover:bg-elevated-highlight': elevated,
+    'hover:scale-105': scale,
   })
 
   
