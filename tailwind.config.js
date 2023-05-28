@@ -13,6 +13,9 @@ module.exports = {
         'highlight': '#1a1a1a',
         'elevated-highlight': '#2a2a2a',
         'elevated-base': '#242424'
+      },
+      width: {
+        '90': '22.5rem'
       }
     },
   },
