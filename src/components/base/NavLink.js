@@ -1,8 +1,12 @@
-export default function NavLink({ to, children }){
+import { Link } from 'react-router-dom'
 
-  return(
-    <a href={to} className='text-white/70 hover:text-white transition-all duration-300 flex items-center gap-x-5 h-10 font-semibold capitalize text-base px-1 py-3'>
+export default function NavLink({ to, children }) {
+  return (
+    <Link
+      to={to}
+      className='text-white/70 hover:text-white transition-all duration-300 flex items-center gap-x-5 h-10 font-semibold capitalize text-base px-1 py-3'
+    >
       {children}
-    </a>
-  );
+    </Link>
+  )
 }

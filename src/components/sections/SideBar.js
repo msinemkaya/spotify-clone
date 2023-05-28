@@ -19,14 +19,12 @@ export default function SideBar({ }){
 
   return(
     <>
-      <nav>
-        {navLinks.map(link => (
-          <NavLink to={link.to}>
-            {link.icon}
-            <span>{link.text}</span>
-          </NavLink>
-        ))}
-      </nav>
+      {navLinks.map(link => (
+        <NavLink to={link.to}>
+          {link.icon}
+          <span>{link.text}</span>
+        </NavLink>
+      ))}
     </>
   );
 }
