@@ -1,6 +1,5 @@
 import classNames from 'classnames'
-import { icons } from './ButtonIcons'; 
-import { Fragment } from 'react';
+import ButtonIcon from './ButtonIcon';
 
 export default function Button({ children ,className, highlight, elevated, type, scale }){
 
@@ -10,14 +9,10 @@ export default function Button({ children ,className, highlight, elevated, type,
     'hover:scale-105': scale,
   })
 
-  
-
   return(
     <button className={finalClassnames}>
+      <ButtonIcon type={type} />
       {children}
-      {icons.map((icon, index) => (
-        icon.type === type ? <Fragment key={index}>{icon.icon}</Fragment>  : null
-      ))}
     </button>
   );
 }
