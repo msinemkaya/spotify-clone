@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import H1 from './H1';
-import H2 from './H2';
-import H3 from './H3';
-import H4 from './H4';
-import H5 from './H5';
-import H6 from './H6';
+import H1 from '../base/heading/H1';
+import H2 from '../base/heading/H2';
+import H3 from '../base/heading/H3';
+import H4 from '../base/heading/H4';
+import H5 from '../base/heading/H5';
+import H6 from '../base/heading/H6';
 
 export default function Heading({ as, className, children }){
 
