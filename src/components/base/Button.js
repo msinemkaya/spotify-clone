@@ -11,7 +11,7 @@ export default function Button({ children ,className, highlight, elevated, type,
 
   return(
     <button className={finalClassnames}>
-      <ButtonIcon type={type} />
+      {type && <ButtonIcon type={type} />}
       {children}
     </button>
   );
