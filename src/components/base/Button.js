@@ -1,7 +1,7 @@
 import classNames from 'classnames'
-import ButtonIcon from './ButtonIcon';
+import Icon from './Icon';
 
-export default function Button({ children ,className, highlight, elevated, type, scale }){
+export default function Button({ children ,className, highlight, elevated, type, iconSize, scale }){
 
   const finalClassnames = classNames('rounded-full p-2 text-white/70 hover:text-white transition-all', className, {
     'hover:bg-highlight': highlight,
@@ -11,7 +11,7 @@ export default function Button({ children ,className, highlight, elevated, type,
 
   return(
     <button className={finalClassnames}>
-      {type && <ButtonIcon type={type} />}
+      {type && <Icon type={type} size={iconSize} />}
       {children}
     </button>
   );
