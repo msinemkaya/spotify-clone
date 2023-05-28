@@ -1,4 +1,4 @@
-import NavLink from 'components/base/NavLink';
+import NavLink from 'components/common/NavLink';
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsSearchHeart } from 'react-icons/bs'
 
