@@ -4,6 +4,7 @@ import Dropdown from 'components/common/Dropdown'
 import FlexBox from 'components/common/FlexBox'
 import NavLink from 'components/common/NavLink'
 import SliderMenu from 'components/common/SliderMenu'
+import SongList from 'components/common/SongList'
 import SpotifyButton from 'components/common/SpotifyButton'
 import Wrapper from 'components/common/Wrapper'
 import { useState } from 'react'
@@ -37,6 +38,51 @@ export default function SideBar({}) {
     setSelection(option)
   }
 
+  const lists = [
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'Beğenilen Şarkılar',
+      subtitle: 'Çalma listesi',
+      subinfo: '289 şarkı'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'My Playlist #7',
+      subtitle: 'Çalma listesi',
+      subinfo: 'Sinem'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'My Playlist #6',
+      subtitle: 'Çalma listesi',
+      subinfo: 'Hako'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'My Playlist #5',
+      subtitle: 'Çalma listesi',
+      subinfo: 'Sinem'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'My Playlist #4',
+      subtitle: 'Çalma listesi',
+      subinfo: 'Sinem'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'Amore del Tropico',
+      subtitle: 'Albüm',
+      subinfo: 'The Black Heart Procession'
+    },
+    {
+      img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
+      title: 'Rihanna',
+      subtitle: 'Sanatçı',
+    },
+    
+  ]
+
   return (
     <Container className={'flex flex-col gap-2 w-90'}>
       <Wrapper>
@@ -61,10 +107,13 @@ export default function SideBar({}) {
           <SpotifyButton highlight type={'plus'} />
         </FlexBox>
         <SliderMenu/>
-        <FlexBox className={'py-2 px-1 justify-between'}>
-          <SpotifyButton highlight type={'search'} />
-          <Dropdown options={options} selection={selection} onSelect={handleSelect}/>
-        </FlexBox>
+        <Container className={'overflow-y-auto flex flex-col max-h-[calc(100%-7.650rem)]'}>
+          <FlexBox className={'py-2 px-1 justify-between'}>
+            <SpotifyButton highlight type={'search'} />
+            <Dropdown options={options} selection={selection} onSelect={handleSelect}/>
+          </FlexBox>
+          <SongList lists={lists} />
+        </Container>
       </Wrapper>
     </Container>
   )

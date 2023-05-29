@@ -9,7 +9,11 @@
 } */
 
 body {
-  @apply bg-black font-roboto p-2
+  @apply bg-black font-roboto p-2 relative h-screen
+}
+
+#root {
+  @apply h-full
 }
 
 .no-scrollbar {
@@ -27,3 +31,14 @@ body {
   mask-image: linear-gradient(90deg,transparent,#000 120px,#000 calc(100% - 120px),transparent)
 }
 
+.dropdown-panel {
+  transform: translate3d(238px, 274px, 0px)
+}
+
+::-webkit-scrollbar {
+  @apply bg-transparent z-40
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white bg-opacity-20 hover:bg-opacity-50
+}
