@@ -84,7 +84,7 @@ export default function SideBar({}) {
   ]
 
   return (
-    <Container className={'flex flex-col gap-2 w-90'}>
+    <Container className={'flex flex-col gap-2 w-90 max-h-full'}>
       <Wrapper>
         {navLinks.map((link, index) => (
           <NavLink key={index} to={link.to}>
@@ -107,7 +107,7 @@ export default function SideBar({}) {
           <SpotifyButton highlight type={'plus'} />
         </FlexBox>
         <SliderMenu/>
-        <Container className={'overflow-y-auto flex flex-col max-h-[calc(100%-7.650rem)]'}>
+        <Container className={'overflow-y-auto flex flex-col h-[calc(100vh-15rem)]'}>
           <FlexBox className={'py-2 px-1 justify-between'}>
             <SpotifyButton highlight type={'search'} />
             <Dropdown options={options} selection={selection} onSelect={handleSelect}/>
