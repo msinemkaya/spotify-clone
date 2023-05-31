@@ -4,20 +4,9 @@ import Icon from 'components/base/Icon';
 import { useRef, useState } from 'react';
 import DropdownPanel from './DropdownPanel';
 
-export default function Dropdown({ options, selection, onSelect }){
+export default function Dropdown({ options, selection, handleClick, handleOptionClick, isOpen }){
 
-  const [isOpen, setIsOpen] = useState(false)
   const dropdown = useRef(null)
-
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
-
-  const handleOptionClick = ( option ) => {
-    setIsOpen(false)
-    onSelect(option)
-  }
-  
 
   return(
     <Container ref={dropdown} className={'relative'}>

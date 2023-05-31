@@ -26,6 +26,17 @@ export default function SideBar({}) {
   ]
 
   const [selection, setSelection] = useState(null)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleOptionClick = ( option ) => {
+    setIsOpen(false)
+    handleSelect(option)
+  }
+  
 
   const options = [
     { label: 'Yakın tarihli', value: 'Yakın tarihli'},
@@ -107,12 +118,12 @@ export default function SideBar({}) {
           <SpotifyButton highlight type={'plus'} />
         </FlexBox>
         <SliderMenu/>
-        <Container className={'overflow-y-auto flex flex-col h-[calc(100vh-15rem)]'}>
+        <Container className={`${isOpen ? 'overflow-hidden' : 'overflow-y-auto'} flex flex-col h-[calc(100vh-15rem)]`}>
           <FlexBox className={'py-2 px-1 justify-between'}>
             <SpotifyButton highlight type={'search'} />
-            <Dropdown options={options} selection={selection} onSelect={handleSelect}/>
+            <Dropdown options={options} selection={selection} onSelect={handleSelect} handleClick={handleClick} handleOptionClick={handleOptionClick} isOpen={isOpen}/>
           </FlexBox>
-          <SongList lists={lists} />
+          <SongList lists={lists}/>
         </Container>
       </Wrapper>
     </Container>
