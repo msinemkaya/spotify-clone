@@ -4,9 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 body {
   @apply bg-black font-roboto p-2 relative h-screen
@@ -45,4 +45,14 @@ body {
 
 .panel {
   @apply absolute z-50 top-0
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+        "left-sidebar main-view main-view"
+        "now-playing-bar now-playing-bar now-playing-bar";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100%;
 }
