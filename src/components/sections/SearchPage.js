@@ -1,7 +1,10 @@
+import UserMenu from 'components/common/UserMenu';
+import Wrapper from 'components/common/Wrapper';
+
 export default function SearchPage({  }){
   return(
-    <div className='text-white'>
-      alskdlga
-    </div>
+    <Wrapper className={'max-w-full'}>
+      <UserMenu />
+    </Wrapper>
   );
 }

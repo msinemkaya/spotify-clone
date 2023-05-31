@@ -1,7 +1,10 @@
+import UserMenu from 'components/common/UserMenu';
+import Wrapper from 'components/common/Wrapper';
+
 export default function HomePage({  }){
   return(
-    <div className='text-white'>
-      kşldsgkakg
-    </div>
+    <Wrapper className={'max-w-full'}>
+      <UserMenu/>
+    </Wrapper>
   );
 }

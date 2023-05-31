@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 
 export default function Content({  }){
   return(
-    <Container>
+    <Container className={'overflow-y-auto max-w-full'}>
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
