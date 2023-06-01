@@ -19,7 +19,7 @@ export default function UserMenu({}) {
   }, [])
 
   return (
-    <FlexBox className={'justify-between gap-2 !px-4 !py-4 box-content h-8 sticky top-0 bg-base'}>
+    <FlexBox className={'justify-between gap-2 !px-4 !py-4 box-content h-8 sticky top-0 bg-base z-50'}>
       <Container className={'flex gap-2 items-center min-w-0'}>
         <SpotifyButton type={'left'} black className={'h-8'} />
         <SpotifyButton type={'right'} black className={'h-8'} />
