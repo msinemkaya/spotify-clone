@@ -1,7 +1,7 @@
 import Button from 'components/base/Button';
 import Container from 'components/base/Container';
 import Icon from 'components/base/Icon';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import DropdownPanel from './DropdownPanel';
 
 export default function Dropdown({ options, selection, handleClick, handleOptionClick, isOpen }){

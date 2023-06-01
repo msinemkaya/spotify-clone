@@ -1,22 +1,13 @@
 import Container from 'components/base/Container'
 import FlexBox from './FlexBox'
 import SpotifyButton from './SpotifyButton'
-import { useLocation } from 'react-router-dom'
-import { useEffect, useRef, useState } from 'react'
 import SearchInput from './SearchInput'
 import Span from 'components/base/Span'
+import useSearchBar from 'hooks/useSearchBar'
 
 export default function UserMenu({}) {
-  const [isSearch, setIsSearch] = useState(false)
-  const location = useLocation()
 
-  useEffect(() => {
-    if (location.pathname === '/search') {
-      setIsSearch(true)
-    } else {
-      setIsSearch(false)
-    }
-  }, [])
+  const isSearch = useSearchBar()
 
   return (
     <FlexBox className='justify-between gap-2 !px-4 !py-4 box-content h-8 sticky top-0 bg-base z-50'>

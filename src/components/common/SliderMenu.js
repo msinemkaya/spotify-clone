@@ -1,13 +1,12 @@
 import SpotifyButton from './SpotifyButton';
 import FlexBox from './FlexBox';
 import Container from 'components/base/Container';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
+import useScroll from 'hooks/useScroll';
 
 export default function SliderMenu(){
 
-  const [scrollX, setScrollX] = useState(0)
-  const [scrolEnd, setscrolEnd] = useState(false)
-
+  
   const scroll = useRef(null)
 
   const items = [
@@ -17,29 +16,7 @@ export default function SliderMenu(){
     `podcast'ler ve programlar`
   ]
 
-  useEffect(() => {
-    if (
-      scroll.current &&
-      scroll?.current?.scrollWidth === scroll?.current?.offsetWidth
-    ) {
-      setscrolEnd(true);
-    } else {
-      setscrolEnd(false);
-    }
-    return () => {};
-  }, [scroll?.current?.scrollWidth, scroll?.current?.offsetWidth]);
-
-  const handleScroll = (e) => {
-    setScrollX(scroll.current.scrollLeft);
-    if (
-      Math.floor(scroll.current.scrollWidth - scroll.current.scrollLeft) <=
-      scroll.current.offsetWidth
-    ) {
-      setscrolEnd(true);
-    } else {
-      setscrolEnd(false);
-    }
-  }
+  const [handleScroll, scrolEnd, scrollX] = useScroll(scroll)
 
   return(
     <Container className='relative py-2 px-1'>
