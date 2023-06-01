@@ -1,6 +1,6 @@
 import { HiOutlinePlus } from 'react-icons/hi'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { BsChevronRight, BsChevronLeft, BsCheck2, BsPinAngleFill } from 'react-icons/bs'
+import { BsChevronRight, BsChevronLeft, BsCheck2, BsPinAngleFill, BsPlayFill } from 'react-icons/bs'
 import { CiUser } from 'react-icons/ci'
 import { TbBooks } from 'react-icons/tb'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
@@ -19,7 +19,8 @@ export default function Icon({ type, className, size = 16 }){
     up: <BiChevronUp size={size}/>,
     check: <BsCheck2 size={size}/>,
     pin: <BsPinAngleFill size={size}/>,
-    download: <MdOutlineDownloading size={size}/>
+    download: <MdOutlineDownloading size={size}/>,
+    play: <BsPlayFill size={size}/>
   }
 
   return(
