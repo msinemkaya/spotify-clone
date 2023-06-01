@@ -13,7 +13,7 @@ export default function ContentLists({ title, list }){
   }
 
   useEffect(() => {
-    window.onresize = screenHandler
+    window.addEventListener('resize', screenHandler)
 
     if(screen < 1024) {
       setNumberToMap(2)
@@ -22,9 +22,11 @@ export default function ContentLists({ title, list }){
     } else if (screen >= 1280) {
       setNumberToMap(4)
     }
-
-    console.log(window.innerWidth)
     
+    return () => {
+      window.removeEventListener('resize', screenHandler)
+    }
+
   }, [screen])
 
   return(

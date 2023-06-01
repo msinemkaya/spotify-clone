@@ -20,7 +20,7 @@ export default function DropdownPanel({ options, selection, handleOptionClick })
         >
           {option.label}
           {option.label === selection?.label && (
-            <Icon type={'check'} size={22} />
+            <Icon type='check' size={22} />
           )}
         </Button>
       ))}

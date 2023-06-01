@@ -110,17 +110,17 @@ export default function SideBar({}) {
             className={
               'text-white/70 hover:text-white transition-all duration-300 flex items-center gap-x-5 h-10 font-semibold capitalize text-base p-3'
             }
-            type={'library'}
+            type='library'
             iconSize={24}
           >
             kitaplığın
           </Button>
-          <SpotifyButton highlight type={'plus'} />
+          <SpotifyButton highlight type='plus' />
         </FlexBox>
         <SliderMenu/>
         <Container className={`${isOpen ? 'overflow-hidden' : 'overflow-y-auto'} flex flex-col h-[calc(100vh-15rem)]`}>
           <FlexBox className={'py-2 px-1 justify-between'}>
-            <SpotifyButton highlight type={'search'} />
+            <SpotifyButton highlight type='search' />
             <Dropdown options={options} selection={selection} onSelect={handleSelect} handleClick={handleClick} handleOptionClick={handleOptionClick} isOpen={isOpen}/>
           </FlexBox>
           <SongList lists={lists}/>

@@ -13,7 +13,7 @@ export default function SongListItem({ list }){
       <Container>
         <H4 className={'text-white mb-1'}>{list.title}</H4>
         <Container className={'flex gap-2 items-center'}>
-          <Icon type={'pin'} className={'text-green-700'}/>
+          <Icon type='pin' className={'text-green-700'}/>
           <Span className={'text-white/70 text-xs tracking-wide'}>{list.subtitle}</Span>
           {list.subinfo && <Span className={'text-white/70 text-xs tracking-wide'}> • {list.subinfo}</Span> }
         </Container>

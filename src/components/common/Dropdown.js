@@ -12,7 +12,7 @@ export default function Dropdown({ options, selection, handleClick, handleOption
     <Container ref={dropdown} className={'relative'}>
       <Button className={'text-xs text-white/70 hover:text-white flex gap-2 h-8 items-center px-2'} onClick={handleClick}>
         {selection?.label || 'Yakın tarihli'}
-        {isOpen ? <Icon type={'up'} /> : <Icon type={'down'} />}
+        {isOpen ? <Icon type={'up'} /> : <Icon type='down' />}
       </Button>
       {isOpen && (
         <DropdownPanel options={options} selection={selection} handleOptionClick={handleOptionClick}/>
