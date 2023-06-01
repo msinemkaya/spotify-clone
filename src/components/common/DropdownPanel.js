@@ -6,8 +6,8 @@ import Icon from 'components/base/Icon';
 
 export default function DropdownPanel({ options, selection, handleOptionClick }) {
   return ReactDOM.createPortal(
-    <Panel className={'dropdown-panel absolute top-0'}>
-      <H6 className={'text-[11px] font-semibold text-white/70 py-3 pr-2 pl-3'}>
+    <Panel className='dropdown-panel absolute top-0'>
+      <H6 className='text-[11px] font-semibold text-white/70 py-3 pr-2 pl-3'>
         Şuna göre sırala:
       </H6>
       {options.map((option) => (

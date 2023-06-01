@@ -32,7 +32,7 @@ export default function ContentLists({ title, list }){
   return(
     <Container>
       <ListHeading>{title}</ListHeading>
-      <Container className={'grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4'}>
+      <Container className='grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4'>
         {list.slice(0, (numberToMap)).map((item, index)=> (
           <ContentListItem item={item} key={index}/>
         ))}

@@ -32,17 +32,16 @@ export default function SideBar({}) {
     setIsOpen(!isOpen)
   }
 
-  const handleOptionClick = ( option ) => {
+  const handleOptionClick = (option) => {
     setIsOpen(false)
     handleSelect(option)
   }
-  
 
   const options = [
-    { label: 'Yakın tarihli', value: 'Yakın tarihli'},
-    { label: 'Yeni eklenenler', value: 'Yeni eklenenler'},
-    { label: 'Alfabetik', value: 'Alfabetik'},
-    { label: 'Oluşturan', value: 'Oluşturan'},
+    { label: 'Yakın tarihli', value: 'Yakın tarihli' },
+    { label: 'Yeni eklenenler', value: 'Yeni eklenenler' },
+    { label: 'Alfabetik', value: 'Alfabetik' },
+    { label: 'Oluşturan', value: 'Oluşturan' },
   ]
 
   const handleSelect = (option) => {
@@ -54,48 +53,47 @@ export default function SideBar({}) {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'Beğenilen Şarkılar',
       subtitle: 'Çalma listesi',
-      subinfo: '289 şarkı'
+      subinfo: '289 şarkı',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'My Playlist #7',
       subtitle: 'Çalma listesi',
-      subinfo: 'Sinem'
+      subinfo: 'Sinem',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'My Playlist #6',
       subtitle: 'Çalma listesi',
-      subinfo: 'Hako'
+      subinfo: 'Hako',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'My Playlist #5',
       subtitle: 'Çalma listesi',
-      subinfo: 'Sinem'
+      subinfo: 'Sinem',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'My Playlist #4',
       subtitle: 'Çalma listesi',
-      subinfo: 'Sinem'
+      subinfo: 'Sinem',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'Amore del Tropico',
       subtitle: 'Albüm',
-      subinfo: 'The Black Heart Procession'
+      subinfo: 'The Black Heart Procession',
     },
     {
       img: 'https://misc.scdn.co/liked-songs/liked-songs-64.png',
       title: 'Rihanna',
       subtitle: 'Sanatçı',
     },
-    
   ]
 
   return (
-    <Container className={'flex flex-col gap-2 w-90 max-h-full'}>
+    <Container className='flex flex-col gap-2 w-90 max-h-full'>
       <Wrapper>
         {navLinks.map((link, index) => (
           <NavLink key={index} to={link.to}>
@@ -105,11 +103,9 @@ export default function SideBar({}) {
         ))}
       </Wrapper>
       <Wrapper>
-        <FlexBox className={'justify-between py-2'}>
+        <FlexBox className='justify-between py-2'>
           <Button
-            className={
-              'text-white/70 hover:text-white transition-all duration-300 flex items-center gap-x-5 h-10 font-semibold capitalize text-base p-3'
-            }
+            className='text-white/70 hover:text-white transition-all duration-300 flex items-center gap-x-5 h-10 font-semibold capitalize text-base p-3'
             type='library'
             iconSize={24}
           >
@@ -117,13 +113,24 @@ export default function SideBar({}) {
           </Button>
           <SpotifyButton highlight type='plus' />
         </FlexBox>
-        <SliderMenu/>
-        <Container className={`${isOpen ? 'overflow-hidden' : 'overflow-y-auto'} flex flex-col h-[calc(100vh-15rem)]`}>
-          <FlexBox className={'py-2 px-1 justify-between'}>
+        <SliderMenu />
+        <Container
+          className={`${
+            isOpen ? 'overflow-hidden' : 'overflow-y-auto'
+          } flex flex-col h-[calc(100vh-15rem)]`}
+        >
+          <FlexBox className='py-2 px-1 justify-between'>
             <SpotifyButton highlight type='search' />
-            <Dropdown options={options} selection={selection} onSelect={handleSelect} handleClick={handleClick} handleOptionClick={handleOptionClick} isOpen={isOpen}/>
+            <Dropdown
+              options={options}
+              selection={selection}
+              onSelect={handleSelect}
+              handleClick={handleClick}
+              handleOptionClick={handleOptionClick}
+              isOpen={isOpen}
+            />
           </FlexBox>
-          <SongList lists={lists}/>
+          <SongList lists={lists} />
         </Container>
       </Wrapper>
     </Container>

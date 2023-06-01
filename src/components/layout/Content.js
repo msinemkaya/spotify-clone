@@ -13,7 +13,7 @@ export default function Content({  }){
   }
 
   return(
-    <Wrapper className={'overflow-y-auto max-w-full h-[98vh] pt-0'} onScroll={handleScroll}>
+    <Wrapper className='overflow-y-auto max-w-full h-[98vh] pt-0' onScroll={handleScroll}>
       <Routes>
           <Route path="/" element={<HomePage scroll={scroll} />} />
           <Route path="/search" element={<SearchPage />} />

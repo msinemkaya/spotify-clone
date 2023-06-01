@@ -59,8 +59,8 @@ export default function SearchPage({  }){
   return(
     <>
       <UserMenu />
-      <Heading as='h2' className={'font-bold mt-8 mb-4'}>Hepsine göz at</Heading>
-      <Container className={'grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6'}>
+      <Heading as='h2' className='font-bold mt-8 mb-4'>Hepsine göz at</Heading>
+      <Container className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
         {items.map((item, index) => (
           <Card item={item} key={index} />
         ))}

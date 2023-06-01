@@ -42,12 +42,12 @@ export default function SliderMenu(){
   }
 
   return(
-    <Container className={'relative py-2 px-1'}>
-      {scrollX !== 0 && <SpotifyButton elevated type='left' className={'z-10 absolute top-2 left-1'}  />}
-        <FlexBox className={'flex gap-2 items-center overflow-auto no-scrollbar slider-shadow'} onScroll={handleScroll} ref={scroll}>
-          {items.map((item, index)=> <SpotifyButton key={index} elevated className={'!text-white h-8 whitespace-nowrap text-sm py-1 px-3 capitalize'}>{item}</SpotifyButton>)}
+    <Container className='relative py-2 px-1'>
+      {scrollX !== 0 && <SpotifyButton elevated type='left' className='z-10 absolute top-2 left-1'  />}
+        <FlexBox className='flex gap-2 items-center overflow-auto no-scrollbar slider-shadow' onScroll={handleScroll} ref={scroll}>
+          {items.map((item, index)=> <SpotifyButton key={index} elevated className='!text-white h-8 whitespace-nowrap text-sm py-1 px-3 capitalize'>{item}</SpotifyButton>)}
         </FlexBox>
-      {!scrolEnd && <SpotifyButton elevated type='right' className={'z-10 absolute top-2 right-1'}/>}
+      {!scrolEnd && <SpotifyButton elevated type='right' className='z-10 absolute top-2 right-1'/>}
     </Container>
   );
 }

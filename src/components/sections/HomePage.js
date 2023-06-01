@@ -30,10 +30,10 @@ export default function HomePage({ scroll }){
   return(
     <>
       <UserMenu scroll={scroll}/>
-      <Container className={'flex flex-col gap-8'}>
-        <ContentLists title={'Popüler radyolar'} list={list1}/>
-        <ContentLists title={'Popüler radyolar'} list={list1}/>
-        <ContentLists title={'Popüler radyolar'} list={list1}/>
+      <Container className='flex flex-col gap-8'>
+        <ContentLists title='Popüler radyolar' list={list1}/>
+        <ContentLists title='Popüler radyolar' list={list1}/>
+        <ContentLists title='Popüler radyolar' list={list1}/>
       </Container>
     </>
   );
