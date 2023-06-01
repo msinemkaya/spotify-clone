@@ -2,7 +2,7 @@ import Container from 'components/base/Container'
 import FlexBox from './FlexBox'
 import SpotifyButton from './SpotifyButton'
 import { useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import SearchInput from './SearchInput'
 import Span from 'components/base/Span'
 
@@ -19,7 +19,7 @@ export default function UserMenu({}) {
   }, [])
 
   return (
-    <FlexBox className={'justify-between gap-2 mx-1 my-2 !h-8'}>
+    <FlexBox className={'justify-between gap-2 !px-4 !py-4 box-content h-8 sticky top-0 bg-base'}>
       <Container className={'flex gap-2 items-center min-w-0'}>
         <SpotifyButton type={'left'} black className={'h-8'} />
         <SpotifyButton type={'right'} black className={'h-8'} />
