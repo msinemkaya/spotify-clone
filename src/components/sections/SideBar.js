@@ -117,7 +117,7 @@ export default function SideBar({}) {
         <Container
           className={`${
             isOpen ? 'overflow-hidden' : 'overflow-y-auto'
-          } flex flex-col h-[calc(100vh-15rem)]`}
+          } flex flex-col h-[calc(100vh-19.5rem)]`}
         >
           <FlexBox className='py-2 px-1 justify-between'>
             <SpotifyButton highlight type='search' />
