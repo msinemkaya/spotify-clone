@@ -3,11 +3,9 @@ import Input from 'components/base/Input'
 import Span from 'components/base/Span'
 import FlexBox from 'components/common/FlexBox'
 import useInputRange from 'hooks/useInputRange'
-import { useRef } from 'react'
 
 export default function Player({}) {
 
-  const range = useRef(null)
   const handleInputChange = useInputRange()
 
   return (
@@ -35,7 +33,7 @@ export default function Player({}) {
         <Button type='device' iconSize={20} />
         <Span className='flex items-center progress-bar'>
           <Button type='volume' iconSize={20} />
-          <Input type='range' min='0' max='100' ref={range} onChange={handleInputChange}/>
+          <Input type='range' min='0' max='100' onChange={handleInputChange}/>
         </Span>
       </FlexBox>
     </FlexBox>

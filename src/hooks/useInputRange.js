@@ -1,4 +1,4 @@
-export default function useInputRange(range){
+export default function useInputRange(){
  const handleInputChange = ({target}) => {
   const min = target.min
   const max = target.max
